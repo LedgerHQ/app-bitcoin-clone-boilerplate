@@ -17,7 +17,7 @@ CURRENCY_TICKER = "TEST"
 def sign_psbt_instruction_approve(model: Firmware) -> Instructions:
     instructions = Instructions(model)
 
-    if model.name.startswith("nano"):
+    if model.is_nano:
         instructions.new_request("Accept")
         instructions.same_request("Accept")
     else:
@@ -30,7 +30,7 @@ def sign_psbt_instruction_approve(model: Firmware) -> Instructions:
 def sign_psbt_instruction_approve_2(model: Firmware) -> Instructions:
     instructions = Instructions(model)
 
-    if model.name.startswith("nano"):
+    if model.is_nano:
         instructions.new_request("Accept")
         instructions.new_request("Accept")
     else:
