@@ -8,7 +8,7 @@ from ragger.navigator import NavInsID
 
 def message_instruction_approve(model: Firmware) -> Instructions:
     instructions = Instructions(model)
-    if model.name.startswith("nano"):
+    if model.is_nano:
         instructions.new_request("Approve")
         instructions.nano_skip_screen("Message")
         instructions.same_request("Sign")
