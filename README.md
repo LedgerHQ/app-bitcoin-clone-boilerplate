@@ -2,7 +2,7 @@
 
 Boilerplate application for bitcoin clones.
 
-This application should be forked to create Bitcoin clone application for Ledger device such as Nano S, NanoX, NanoS+, Ledger Stax or Ledger Flex.
+This application should be forked to create Bitcoin clone application for Ledger device such as NanoX, NanoS+, Ledger Stax or Ledger Flex.
 
 The original beta specification can be found at https://ledgerhq.github.io/btchip-doc/bitcoin-technical-beta.html - with the regular set of APDUs for standard wallet operations enabled.
 

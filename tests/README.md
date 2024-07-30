@@ -20,7 +20,7 @@ Then run all the tests using:
 pytest --device all
 ```
 
-## Launch with your Nano S/X
+## Launch with your device
 
 Compile and install the app on your device as normal.
 
