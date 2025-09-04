@@ -52,10 +52,8 @@ class RaggerAdaptor:
             instruction_on_text = []
             save_screenshot = []
 
-        try:
-            response = self.transport_client.exchange_raw(apdu, tick_timeout=2)
-        except TimeoutError:
-            with self.transport_client.exchange_async_raw(apdu):
+        with self.transport_client.exchange_async_raw(apdu) as done:
+            if not done:
                 for t, instr_approve, instr_next, compare in zip(text[index],
                                                                  instruction_on_text[index],
                                                                  instruction_until_text[index],
@@ -74,6 +72,6 @@ class RaggerAdaptor:
                                                       screen_change_before_first_instruction=True)
                     sub_index += 1
 
-            response = self.last_async_response()
-            index += 1
+                index += 1
+        response = self.last_async_response()
         return response.status, response.data, index
