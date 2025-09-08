@@ -23,7 +23,7 @@
 # To use Trusted Input for segwit, app version must be kept > 2.0.0
 APPVERSION_M = 2
 APPVERSION_N = 0
-APPVERSION_P = 3
+APPVERSION_P = 4
 
 APPDEVELOPPER="Ledger"
 APPCOPYRIGHT="(c) 2024 Ledger"
@@ -45,24 +45,24 @@ endif
 #DEBUG = 1
 
 ifeq ($(COIN),bitcoin_clone_boilerplate)
-	
+
 # Refer to : https://github.com/dan-da/coinparams/blob/master/coinprefixes.md
 BIP44_COIN_TYPE=1
 BIP44_COIN_TYPE_2=1
 COIN_P2PKH_VERSION=111
 COIN_P2SH_VERSION=196
-COIN_NATIVE_SEGWIT_PREFIX=\"tb\" 
+COIN_NATIVE_SEGWIT_PREFIX=\"tb\"
 
 # Name of the coin that will be used in the app display
 COIN_COINID_NAME="Bitcoin Clone BP"
 
 # Ticker that will be used in the transaction display
-COIN_COINID_SHORT=\"BP\" 
+COIN_COINID_SHORT=\"BP\"
 
 # Sign message magic header
 COIN_COINID=\"Bitcoin\"
 
-# COIN_FAMILY can be set to FAMILY_BITCOIN, FAMILY_PEERCOIN, or FAMILY_STEALTH to handle 
+# COIN_FAMILY can be set to FAMILY_BITCOIN, FAMILY_PEERCOIN, or FAMILY_STEALTH to handle
 # parsing of the timestamp in the transaction (see lib-app-bitcoin/transaction.c)
 COIN_FAMILY=FAMILY_BITCOIN
 
